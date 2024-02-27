@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    background-image: url(/images/background.png);
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+
+section {
+    padding: 2% 4%;
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+/* links */
+nav {
+    text-align: center;
+    padding: 1px;
+    text-align: center;
+}
+
+
+li {
+    display: inline-block;
+    margin-right: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li:hover {
+    box-shadow: 0px 0px 8px white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a:link, a:visited {
+    color:#164863;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/*estilo conteudo X imagem */ 
+
+section.inicio {
+    padding: 40px 4%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.apresentacao {
+    display: flex;
+}
+
+
+section.inicio .apresentacao {
+    align-items: center; 
+    justify-content: center;
+    gap: 95px; /*distancia entre conteudo e imagem*/
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color:#164863;
+}
+
+.texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+}
+
+
+.botao button {
+    background-color: #427D9D;
+    font-family: 'Montserrat', sans-serif;
+    border: none; /* Remove as bordas */
+    color: white; /* Define a cor do texto */
+    text-decoration: none;
+    cursor: pointer; 
+    box-sizing: border-box;
+    padding: 3%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.botao button:hover {
+    box-shadow: 0px 0px 8px #164863;
+}
+
+
+@media screen and (max-width: 1020px){
+    .apresentacao {
+        flex-direction: column;
+        padding: 3%;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
+    .titulo {
+        font-size: 27px;
+    }
+
+    .texto {
+        font-size: 20px;
+    }
+    .inicio .imagem img {
+        max-width: 300px;
+    }
+
+}
+
+.apresentacao .imagem img {
+    position: relative;  /* keyframe só funciona se tiver uma posicao relativa */
+    animation: flutuante 2s ease-in-out infinite alternate; /*a propriedade animation está aplicando uma animação chamada "flutuante" com duração de 2 segundos, efeito de temporização ease-in-out, repetida infinitamente e alternando direções a cada ciclo */
+
+}
+
+@keyframes flutuante {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+footer p { 
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 4px;
+    background-color: #427D9D;
+    color: white;
+}

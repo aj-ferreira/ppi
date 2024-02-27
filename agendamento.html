@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Agendamentos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/agendamento.css" >
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="endereco.html">Endereço</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main>
+    <h1>Agende sua consuta!</h1>
+    <form action="agendamento.php" method="post">
+        <div class="container">
+            <div  class="item">
+                <label for="nameAgendamento">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div  class="item">
+                <label for="dataAgendamento">Data desejada:</label>
+                <input type="date" id="dataAgendamento" name="dataAgendamento" required>
+            </div>
+
+            <div  class="item">
+                <label for="horarioAgendamento">Horário:</label>
+                <input type="time" id="horarioAgendamento" name="horarioAgendamento" required>
+            </div>
+
+            <div  class="item">
+                <label for="especialidadeAgendamento">Especialidade:</label>
+                <select id="especialidadeAgendamento" name="especialidadeAgendamento" required>
+                <option value="">Escolha a especialidade</option>
+                <option value="psiquiatra">Psiquiatra</option>
+                <option value="nutrologo">Nutrólogo</option>
+                <option value="cardiologista">Cardiologista</option>
+                </select>
+            </div>
+
+            <div  class="item">
+                <label for="motivoAgendamento">Motivo da visita:</label>
+                <textarea id="motivoAgendamento" name="motivoAgendamento" rows="4" cols="50" required></textarea>
+            </div>
+
+            <div  class="item">
+                <input type="submit" value="Agendar">
+            </div>
+            
+        </div>
+    </form>
+  </main>
+  <footer>
+    <p>Direitos resevados.</p>
+  </footer>
+</body>
+</html>
