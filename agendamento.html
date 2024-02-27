@@ -14,49 +14,74 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="endereco.html">Endereço</a></li>
+                <li><a href="agendamento.html">Agendamentos</a></li>
             </ul>
         </nav>
     </header>
   <main>
-    <h1>Agende sua consuta!</h1>
-    <form action="agendamento.php" method="post">
-        <div class="container">
-            <div  class="item">
-                <label for="nameAgendamento">Nome:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+    <div class="container">
+        <form action="agendamento.php" method="post">
+        
+                <div class="form-header">
+                    <h1>Agende sua consuta!</h1>
+                </div>
+                <div  class="item">
+                    <label for="nameAgendamento">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <div  class="item">
-                <label for="dataAgendamento">Data desejada:</label>
-                <input type="date" id="dataAgendamento" name="dataAgendamento" required>
-            </div>
+                <div  class="item">
+                    <label for="dataAgendamento">Data desejada:</label>
+                    <input type="date" id="dataAgendamento" name="dataAgendamento" required>
+                </div>
 
-            <div  class="item">
-                <label for="horarioAgendamento">Horário:</label>
-                <input type="time" id="horarioAgendamento" name="horarioAgendamento" required>
-            </div>
+                <div  class="item">
+                    <label for="horarioAgendamento">Horário:</label>
+                    <input type="time" id="horarioAgendamento" name="horarioAgendamento" required>
+                </div>
 
-            <div  class="item">
-                <label for="especialidadeAgendamento">Especialidade:</label>
-                <select id="especialidadeAgendamento" name="especialidadeAgendamento" required>
-                <option value="">Escolha a especialidade</option>
-                <option value="psiquiatra">Psiquiatra</option>
-                <option value="nutrologo">Nutrólogo</option>
-                <option value="cardiologista">Cardiologista</option>
-                </select>
-            </div>
+                <div  class="item">
+                    <div class="especialidade">
+                        <label for="especialidadeAgendamento">Especialidade:</label>
+                        <select id="especialidadeAgendamento" name="especialidadeAgendamento" required>
+                        <option value="">Escolha a especialidade</option>
+                        <option value="psiquiatra">Psiquiatra</option>
+                        <option value="nutrologo">Nutrólogo</option>
+                        <option value="cardiologista">Cardiologista</option>
+                        </select>
+                    </div>
+                    
+                </div>
 
-            <div  class="item">
-                <label for="motivoAgendamento">Motivo da visita:</label>
-                <textarea id="motivoAgendamento" name="motivoAgendamento" rows="4" cols="50" required></textarea>
-            </div>
+                <div  class="item">
+                    <div class="pagamento">
+                        <div class="pagamento-input">
+                            <input type="radio" id="particular" name="pagamento">
+                            <label for="particular">Particular</label>        
+                        </div>
+                        <div class="pagamento-input">
+                            <input type="radio" id="unimed" name="pagamento">
+                            <label for="unimed">Unimed</label>        
+                        </div>
+                        <div class="pagamento-input">
+                            <input type="radio" id="vitallis" name="pagamento">
+                            <label for="vitallis">Vitallis</label>        
+                        </div>
+                        <div class="pagamento-input">
+                            <input type="radio" id="bradesco" name="pagamento">
+                            <label for="bradesco">Bradesco Saúde</label>        
+                        </div>
+                    </div>
+                    
+                </div>
 
-            <div  class="item">
-                <input type="submit" value="Agendar">
-            </div>
+                <div  class="item">
+                    <input type="submit" value="Agendar">
+                </div>
+                
             
-        </div>
-    </form>
+        </form>
+    </div>
   </main>
   <footer>
     <p>Direitos resevados.</p>

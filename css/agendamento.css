@@ -1,17 +1,22 @@
 body {
     margin: 0;
+    padding: 0;
     background-image: url(/images/background.png);
     background-position: center center;
     background-repeat: repeat-y;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 main {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 nav {
     text-align: center;
@@ -36,10 +41,59 @@ a:link, a:visited {
     text-decoration: none;
     font-weight: bold;
 }
-footer p { 
+.container {
+    width: 50%; 
+    padding: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+}
+.item
+{
+    margin-bottom: 1rem;
+}
+.item input
+{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1,2rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow:1px 1px 5px #ccc;
+}
+.item label
+{
+    color:#164863;
+}
+.pagamento
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pagamento-input input
+{
+    margin-right: 0.3rem;
+}
+.especialidade select
+{
+    border: none;
+}
+.form-header
+{
+    color:#164863;
+}
+footer p{ 
     margin: 0 auto;
     margin-top: 50px;
-    padding: 4px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
     background-color: #427D9D;
     color: white;
+    bottom: 0;
+    position: absolute;
+    width:100%;
 }
