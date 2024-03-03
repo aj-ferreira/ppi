@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Área Restrita - Endereços</title>
+  <title>Área Restrita - Meus gendamentos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap -->
@@ -12,8 +12,8 @@
   <header>
     <!-- Barra navegação -->
   
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid ">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,47 +45,57 @@
         </div>
     </nav>
   </header>
-  <main>
-    <div class="listagem">
-      <div>
-        <h2>Lista de Endereços</h2>
+    <main>
+      <div class="listagem">
+        <div>
+          <h2>Meus Agendamentos</h2>
+        </div>
+          
+          <table class=" table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">idPaciente</th>
+                <th scope="col">Data</th>
+                <th scope="col">Hora</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>#32165</td>
+                <td>2022-04-15</td>
+                <td>10:30 AM</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>#45689</td>
+                <td>2022-04-18</td>
+                <td>03:15 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>#78912</td>
+                <td>2022-04-20</td>
+                <td>09:00 AM</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>#89456</td>
+                <td>2022-04-22</td>
+                <td>01:45 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>#56894</td>
+                <td>2022-04-25</td>
+                <td>11:20 AM</td>
+              </tr>
+            </tbody>
+          </table>
       </div>
-        
-        <table class=" table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Cidade</th>
-              <th scope="col">Estado</th>
-              <th scope="col">CEP</th>
-              <th scope="col">Logradouro</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>São Paulo</td>
-              <td>SP</td>
-              <td>01234-567</td>
-              <td>Rua ABC, 123</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Rio de Janeiro</td>
-              <td>RJ</td>
-              <td>20000-123</td>
-              <td>Avenida XYZ, 456</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Brasília</td>
-              <td>DF</td>
-              <td>70000-789</td>
-              <td>Quadra 123, Bloco C</td>
-          </tbody>
-        </table>
-    </div>
-  </main>
+    </main>
   <footer>
     <p>Direitos resevados.</p>
   </footer>
