@@ -1,43 +1,39 @@
-.enderecos {
+  body
+  {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
   }
   
-  .enderecos h2 {
+  header{
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .listagem
+  {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .listagem div
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .listagem h2 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
     margin-top: 0;
-  }
-  
-  #lista-enderecos {
-    list-style-type: none;
-    padding: 0;
-    margin: 16px 0 0 0;
-  }
-  
-  #lista-enderecos li {
-    padding: 8px 0;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #444;
-  }
-  
-  #lista-enderecos li:before {
-    content: '\2022';
-    margin-right: 8px;
-    color: #6c63ff;
+
   }
   footer p
   {
     width: 100%;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     background-color: #427D9D;
     color: white;
     bottom: 0;

@@ -21,57 +21,79 @@
     </header>
   <main>
     <div class="container">
-        <form action="agendamento.php" method="post">
+        <form action="agenda.php" method="post">
         
                 <div class="form-header">
                     <h1>Agende sua consuta!</h1>
                 </div>
                 <div  class="item">
-                    <label for="nameAgendamento">Nome:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
-
                 <div  class="item">
-                    <label for="dataAgendamento">Data desejada:</label>
-                    <input type="date" id="dataAgendamento" name="dataAgendamento" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-
                 <div  class="item">
-                    <label for="horarioAgendamento">Horário:</label>
-                    <input type="time" id="horarioAgendamento" name="horarioAgendamento" required>
-                </div>
-
-                <div  class="item">
-                    <div class="especialidade">
-                        <label for="especialidadeAgendamento">Especialidade:</label>
-                        <select id="especialidadeAgendamento" name="especialidadeAgendamento" required>
-                        <option value="">Escolha a especialidade</option>
-                        <option value="psiquiatra">Psiquiatra</option>
-                        <option value="nutrologo">Nutrólogo</option>
-                        <option value="cardiologista">Cardiologista</option>
-                        </select>
+                    <div class="sexo">
+                        <div class="sexo-input">
+                            <input type="radio" id="feminino" name="sexo">
+                            <label for="sexo">Feminino</label>        
+                        </div>
+                        <div class="sexo-input">
+                            <input type="radio" id="masculino" name="sexo">
+                            <label for="sexo">Masculino</label>        
+                        </div>
+                        
                     </div>
                     
                 </div>
 
                 <div  class="item">
-                    <div class="pagamento">
-                        <div class="pagamento-input">
-                            <input type="radio" id="particular" name="pagamento">
-                            <label for="particular">Particular</label>        
-                        </div>
-                        <div class="pagamento-input">
-                            <input type="radio" id="unimed" name="pagamento">
-                            <label for="unimed">Unimed</label>        
-                        </div>
-                        <div class="pagamento-input">
-                            <input type="radio" id="vitallis" name="pagamento">
-                            <label for="vitallis">Vitallis</label>        
-                        </div>
-                        <div class="pagamento-input">
-                            <input type="radio" id="bradesco" name="pagamento">
-                            <label for="bradesco">Bradesco Saúde</label>        
-                        </div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div  class="item">
+                    <div class="divSelect">
+                        <label for="horario">Horário:</label>
+                        <select id="horario" name="horario" required>
+                            <option value="" disabled selected>Selecione um horário</option>
+                            <option value="08:00">08:00 AM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div  class="item">
+                    <div class="divSelect">
+                        <label for="especialidade">Especialidade:</label>
+                        <select id="especialidade" name="especialidade" required>
+                            <option value="" disabled selected>Escolha a especialidade</option>
+                            <option value="psiquiatra">Psiquiatra</option>
+                            <option value="nutrologo">Nutrólogo</option>
+                            <option value="cardiologista">Cardiologista</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div  class="item">
+                    <div class="divSelect">
+                        <label for="medico">Médico Especialista:</label>
+                        <select id="medico" name="medico" required>
+                            <option value="" disabled selected>Escolha o/a especialista</option>
+                            <option value="DraAnaP">Dra. Ana Pereira</option>
+                            <option value="DrLuizC">Dr. Luiz Costa</option>
+                            <option value="DrCarlosO">Dr. Carlos Oliveira</option>
+                        </select>
                     </div>
                     
                 </div>
