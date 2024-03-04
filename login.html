@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -18,22 +18,23 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <form action="login.php" method="post">
-            <div class="informacoes">
-                <div id="idEmail">
+    <main class="center-main">
+        <div class="containerForm">
+            <form action="login.php" method="post">
+                <div id="idEmail" class="item">
                     <label for="email">E-mail:</label>
                     <input type="text" id="email" name="email" required>
                 </div>
-                <div id="idSenha">
+                <div id="idSenha" class="item">
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
                 </div>
-                <button>
-                    <span>Entrar</span>
-                </button>
-            </div>
+                <div  class="item">
+                    <input type="submit" value="Agendar">
+                </div>
         </form>
+        </div>
+        
     </main>
     <footer>
         <p>Direitos reservados.</p>

@@ -4,7 +4,7 @@
   <title>Agendamentos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/agendamento.css" >
+  <link rel="stylesheet" type="text/css" href="css/style.css" >
 </head>
 <body>
     <header class="cabecalho">
@@ -19,8 +19,8 @@
             </ul>
         </nav>
     </header>
-  <main>
-    <div class="container">
+  <main class="center-main">
+    <div class="containerForm">
         <form action="agenda.php" method="post">
         
                 <div class="form-header">
@@ -36,13 +36,14 @@
                 </div>
                 <div  class="item">
                     <div class="sexo">
+
                         <div class="sexo-input">
+                            <label for="sexo">Feminino</label>
                             <input type="radio" id="feminino" name="sexo">
-                            <label for="sexo">Feminino</label>        
                         </div>
                         <div class="sexo-input">
+                            <label for="sexo">Masculino</label>
                             <input type="radio" id="masculino" name="sexo">
-                            <label for="sexo">Masculino</label>        
                         </div>
                         
                     </div>

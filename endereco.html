@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Endereço</title>
-    <link rel="stylesheet" href="css/endereco.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -18,30 +18,33 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <form action="login.php" method="post">
-            <div class="informacoes">
-                <div id="idCep">
-                    <label for="user">CEP:</label>
-                    <input type="text" id="user" name="usuario" required>
-                </div>
-                <div id="idLogradouro">
-                    <label for="logradouro">Logradouro:</label>
-                    <input type="text" id="logradouro" name="logradouro" required>
-                </div>
-                <div id="idCidade">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required>
-                </div>
-                <div id="idEstado">
-                    <label for="estado">Estado:</label>
-                    <input type="text" id="estado" name="estado" required>
-                </div>
-                <button>
-                    <span>Entrar</span>
-                </button>
-            </div>
-        </form>
+    <main class="center-main">
+        <div class="containerForm">
+            <form action="login.php" method="post">
+                    <div class="form-header">
+                        <h1>Cadastre seu endereço!</h1>
+                    </div>
+                    <div id="idCep" class="item">
+                        <label for="user">CEP:</label>
+                        <input type="text" id="user" name="usuario" required>
+                    </div >
+                    <div id="idLogradouro" class="item">
+                        <label for="logradouro">Logradouro:</label>
+                        <input type="text" id="logradouro" name="logradouro" required>
+                    </div>
+                    <div id="idCidade" class="item">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                    <div id="idEstado" class="item">
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado" required>
+                    </div>
+                    <div  class="item">
+                        <input type="submit" value="Entrar">
+                    </div>
+            </form>
+        </div>
     </main>
     <footer>
         <p>Direitos reservados.</p>
