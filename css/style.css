@@ -1,31 +1,25 @@
 
 body {
+    display: flex;
+    flex-direction: column; /* garante que o rodapé sempre fique na parte inferior da página, mesmo que o conteúdo não ocupe toda a altura, pois os elementos serão empilhados verticalmente em relação ao fluxo do documento*/
+    min-height: 100vh; /*ao combinarmos  min-height: 100vh; com flex-direction: column, o corpo (body) sempre terá pelo menos a altura total da janela de visualização, mesmo que o conteúdo seja insuficiente para preencher toda a altura*/
     margin: 0;
     background-image: url(../images/background.png);
     background-position: center center;
     background-repeat: repeat-y;
     background-size: cover;
-    font-family: 'Montserrat', sans-serif;
-    color:#164863;
 }
-.center-main
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 /* links */
 nav {
     text-align: center;
     padding: 1px;
-    text-align: center;
 }
 
 
 li {
     display: inline-block;
     margin-right: 35px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 li:hover {
@@ -42,7 +36,26 @@ a:link, a:visited {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.botao button {
+    background-color: #427D9D;
+    font-family: 'Montserrat', sans-serif;
+    border: none; /* Remove as bordas */
+    color: white; /* Define a cor do texto */
+    text-decoration: none;
+    cursor: pointer; 
+    box-sizing: border-box;
+    padding: 3%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.botao button:hover {
+    box-shadow: 0px 0px 8px #164863;
+}
+
 
 /* Estilizando a parte dos sections para todas as páginas que possui section */
 
@@ -67,96 +80,19 @@ section .apresentacao {
 }
 
 /* estilizando titulos da section da página index */
-.titulo_inicial {
+.titulo {
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
     color:#164863;
 }
 
-.texto_inicial {
+.texto {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
 }
 
 
-.botao button {
-    background-color: #427D9D;
-    font-family: 'Montserrat', sans-serif;
-    border: none; /* Remove as bordas */
-    color: white; /* Define a cor do texto */
-    text-decoration: none;
-    cursor: pointer; 
-    box-sizing: border-box;
-    padding: 3%;
-    border-radius: 10px;
-    font-size: 15px;
-}
 
-.botao button:hover {
-    box-shadow: 0px 0px 8px #164863;
-}
-
-/*form */
-.containerForm {
-    width: 50%; 
-    padding: 3rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    flex-direction: column;
-    justify-content: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 5px 5px 10px rgba(0,0,0,.212);
-    align-items: center;
-    
-}
-
-.item
-{
-    margin-bottom: 1.5rem; 
-    width: 100%;
-    
-}
-.item input
-{
-    margin-top: 1rem;
-    margin: 0.6rem 0;
-    padding: 0.8rem 1,2rem;
-    border: none;
-    border-radius: 5px;
-    box-shadow:1px 1px 5px #ccc;
-    width: 100%;
-    text-align: center;
-    
-}
-.item input[type="radio"] {
-    width: auto; 
-    margin-right: 0.5rem; /* Add a margin-right for spacing between radio buttons */
-}
-.item label
-{
-    color:#164863;
-}
-.sexo
-{
-    display: flex;
-    justify-content: space-between;
-
-}
-.divSelect select
-{
-    border: none;
-    border-radius: 5px;
-    box-shadow:1px 1px 5px #ccc;
-    width: 100%;
-    text-align: center;
-}
-.form-header
-{
-    color:#164863;
-    text-align: center;
-}
 /*section 1 da página home */
 
 
@@ -261,15 +197,77 @@ section .apresentacao {
 }
 
 
-/**** Página Novo Endereço ****/
 
-.mainEndereco, .loginMain{ /*coloquei classe nas mains dos form, pois em todas as páginas há main, era preciso diferenciar */
+/****forms *****/
+
+.center-main
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
+
+.containerForm {
+    width: 50%; 
+    padding: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;    
+}
+
+.item
+{
+    margin-bottom: 1.5rem; 
+    width: 100%;
+    
+}
+.item input
+{
+    margin-top: 1rem;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1,2rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow:1px 1px 5px #ccc;
+    width: 100%;
+    text-align: center;
+    
+}
+.item input[type="radio"] {
+    width: auto; 
+    margin-right: 0.5rem; /* Add a margin-right for spacing between radio buttons */
+}
+.item label
+{
+    color:#164863;
+}
+.sexo
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+.divSelect select
+{
+    border: none;
+    border-radius: 5px;
+    box-shadow:1px 1px 5px #ccc;
+    width: 100%;
+    text-align: center;
+}
+.form-header
+{
+    color:#164863;
+    text-align: center;
+}
+
 
 
 /********* animacoes **************/
@@ -299,7 +297,7 @@ section .apresentacao {
     }
 }
 
-.apresentacao, .containerForm{
+.apresentacao, .container{
     animation: go-back 3s;
 }
 
@@ -362,25 +360,36 @@ section .apresentacao {
         font-size: 17px;
     }
     /*form do endereço */
-    .mainEndereco, .loginMain {
+    form {
         width: 95%;
     }
-    .mainEndereco form, .loginMain form {
-        margin: 4%;
-    }
-
+    nav ul {
+        display: block;
+        text-align: center;
+      }
+  
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      nav ul li:last-child {
+        margin-bottom: 0;
+      }
 }
-footer {
-    bottom: 0;
-    margin-bottom: 0px;
-    width: 100%;
-    text-align: center;
-    position: fixed;
 
-  }
-footer p { 
-    margin-top: 50px;
-    padding: 4px;
+
+/*Para que o footer fique ao fim da página*/
+main {
+    flex-grow: 1; /*  garante que o conteúdo principal estenda-se até o rodapé, mesmo que haja pouco conteúdo. */
+    padding-top: 20px; /* Adicionar algum espaço superior para evitar que o conteúdo fique muito próximo do topo */
+    margin-bottom: 50px; /* Adicionar margem na parte inferior para criar espaço entre o conteúdo e o rodapé */
+}
+
+
+footer {
     background-color: #427D9D;
-    color: white;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
