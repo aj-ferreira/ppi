@@ -62,3 +62,13 @@
     background-color: #f0f0f0 !important;
     
   }
+  thead>tr > th{
+    color: #fff!important;
+    background-color: #001f3f!important;
+  }
+  .dark
+  {
+    color: #fff!important;
+    background-color: #212529!important;
+    /*border-color: #32383e!important;*/
+  }
