@@ -1,11 +1,22 @@
-  body
+  /*body
   {
     margin: 0;
     padding: 0;
     width: 100%;
+   
+  }*/
+  body {
+    display: flex;
+    flex-direction: column; /* garante que o rodapé sempre fique na parte inferior da página, mesmo que o conteúdo não ocupe toda a altura, pois os elementos serão empilhados verticalmente em relação ao fluxo do documento*/
+    min-height: 100vh; /*ao combinarmos  min-height: 100vh; com flex-direction: column, o corpo (body) sempre terá pelo menos a altura total da janela de visualização, mesmo que o conteúdo seja insuficiente para preencher toda a altura*/
+    margin: 0;
+    background-image: url(/../images/background.png);
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
-  }
-  
+}
+
   header{
     background-color: #e3f2fd;
     display: flex;
@@ -38,4 +49,26 @@
     color: white;
     bottom: 0;
     position: absolute;
+  }
+  .mainForm
+  {
+    width: 55% !important;; 
+    background-color: #ffffff !important;
+    border-radius: 6px;
+    padding: 1.75rem;
+  }
+  .bodyCadastro
+  {
+    background-color: #f0f0f0 !important;
+    
+  }
+  thead>tr > th{
+    color: #fff!important;
+    background-color: #001f3f!important;
+  }
+  .dark
+  {
+    color: #fff!important;
+    background-color: #212529!important;
+    /*border-color: #32383e!important;*/
   }
