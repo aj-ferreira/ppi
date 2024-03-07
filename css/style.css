@@ -39,7 +39,7 @@ a:link, a:visited {
     font-family: 'Montserrat', sans-serif;
 }
 
-.botao button {
+.botao a {
     background-color: #427D9D;
     font-family: 'Montserrat', sans-serif;
     border: none; /* Remove as bordas */
@@ -152,13 +152,6 @@ section .apresentacao {
 
 
 /* Página galeria */
-.container {
-    padding: 0.5%; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
 
 .cards {
     font-family: 'Montserrat', sans-serif;
@@ -232,7 +225,7 @@ section .apresentacao {
 {
     margin-top: 1rem;
     margin: 0.6rem 0;
-    padding: 0.8rem 1,2rem;
+    padding: 0.8rem;
     border: none;
     border-radius: 5px;
     box-shadow:1px 1px 5px #ccc;
@@ -242,7 +235,7 @@ section .apresentacao {
 }
 .item input[type="radio"] {
     width: auto; 
-    margin-right: 0.5rem; /* Add a margin-right for spacing between radio buttons */
+    margin-right: 0.5rem; /* Adicionando um margin-right para espaço entre os radios buttons */
 }
 .item label
 {
@@ -270,25 +263,9 @@ section .apresentacao {
 
 
 
-/********* animacoes **************/
+/********* animação **************/
 
-/*Animação para página index */
-@keyframes flutuante {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: 30px;
-    }
-}
-
-.imagem_inicial img {
-    position: relative;  /* keyframe só funciona se tiver uma posicao relativa */
-    animation: flutuante 2s ease-in-out infinite alternate; /*a propriedade animation está aplicando uma animação chamada "flutuante" com duração de 2 segundos, efeito de temporização ease-in-out, repetida infinitamente e alternando direções a cada ciclo */
-
-}
-/* Para as outras */
-@keyframes go-back {
+@keyframes anima {
     0% {
         transform: translateX(100px);
     }
@@ -298,10 +275,44 @@ section .apresentacao {
 }
 
 .apresentacao, .container{
-    animation: go-back 3s;
+    animation: anima 3s;
 }
 
-/* media queries para ficar responsivo em outras telas com width igual ou menor que 1020*/
+
+/* media queries para ficar responsivo em outras telas*/
+@media screen and (max-width: 300px) {
+    .inicio .apresentacao .conteudo {
+      max-width: 90%; /* Ajuste o valor conforme necessário */
+    }
+    .inicio .apresentacao .imagem img {
+      max-width: 100%; /* Garanta que a imagem se ajuste à largura do contêiner pai */ 
+    }
+    footer {
+        width: 100%;
+    }
+    section .conteudo {
+        max-width: 100%;
+    }
+    .cards {
+        width: 100%; /* Defina a largura dos cartões para ocupar toda a largura da tela em telas muito pequenas */
+    }
+    .containerForm {
+        width: 90%;
+        
+    }
+    .form-header {
+        font-size: 7px;
+    }
+    .sexo {
+        display: block; /* Muda para o layout de bloco */
+    }
+    label {
+        font-size: 12px;
+    }
+
+  }
+  
+  
 @media screen and (max-width: 1020px){
     .apresentacao {
         flex-direction: column;
@@ -311,8 +322,8 @@ section .apresentacao {
 
     .apresentacao .imagem1_home,
     .apresentacao .imagem2_home,
-    .apresentacao .imagem3_home {
-        order: -1; /*o elemento com order: -1; será exibido primeiro, imagem vem antes de apresentacao*/
+    .apresentacao .imagem3_home, .inicio .imagem {
+        order: -1;
     }
 
     section .apresentacao {
@@ -376,7 +387,11 @@ section .apresentacao {
       nav ul li:last-child {
         margin-bottom: 0;
       }
+      .inicio .imagem img {
+         max-width: 300px;
+      }    
 }
+
 
 
 /*Para que o footer fique ao fim da página*/
@@ -392,4 +407,5 @@ footer {
     color: #fff;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    
 }
