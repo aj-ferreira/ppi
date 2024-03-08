@@ -262,7 +262,6 @@ section .apresentacao {
 }
 
 
-
 /* media queries para ficar responsivo em outras telas*/
 @media screen and (max-width: 300px) {
     .inicio .apresentacao .conteudo {
