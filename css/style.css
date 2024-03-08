@@ -263,22 +263,6 @@ section .apresentacao {
 
 
 
-/********* animação **************/
-
-@keyframes anima {
-    0% {
-        transform: translateX(100px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.apresentacao, .container{
-    animation: anima 3s;
-}
-
-
 /* media queries para ficar responsivo em outras telas*/
 @media screen and (max-width: 300px) {
     .inicio .apresentacao .conteudo {
